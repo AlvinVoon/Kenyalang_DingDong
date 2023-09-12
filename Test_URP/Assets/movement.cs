@@ -12,7 +12,6 @@ public class movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         rb.centerOfMass = new Vector3(0, -5.0f, 0);
     }
 
