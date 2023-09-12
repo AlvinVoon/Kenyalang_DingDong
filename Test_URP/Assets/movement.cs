@@ -8,10 +8,12 @@ public class movement : MonoBehaviour
     private Rigidbody rb;
     private bool isGrounded;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        rb.centerOfMass = new Vector3(0, -5.0f, 0);
     }
 
     void Update()
