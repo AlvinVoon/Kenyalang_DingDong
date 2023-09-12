@@ -9,17 +9,14 @@ public class golden_fish_logic : MonoBehaviour
     public TextMeshProUGUI golden_fish_score;
     private int score = 0; // Change score to an integer
 
-    public AudioClip reward; // Reference to your sound clip
 
-    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         goldenFish.SetActive(true);
         UpdateScoreText(); // Update the score text when the game starts
-        audioSource = GetComponent<AudioSource>();
-        audioSource.clip = reward;
+
     }
 
     // Update is called once per frame
@@ -36,7 +33,6 @@ public class golden_fish_logic : MonoBehaviour
             goldenFish.SetActive(false);
             score++; // Increment the score by 1
             UpdateScoreText(); // Update the score text when the score changes
-            audioSource.Play();
         }
     }
 

@@ -34,5 +34,7 @@ public class movement : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+
+  
     }
 }
