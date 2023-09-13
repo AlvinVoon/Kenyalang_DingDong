@@ -9,7 +9,7 @@ public class golden_fish_logic : MonoBehaviour
     public TextMeshProUGUI golden_fish_score;
     private int score = 0; // Change score to an integer
 
-
+    public float rotationSpeed = 100.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +21,8 @@ public class golden_fish_logic : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {;
-    // You don't need to update the score text in Update() if the score doesn't change elsewhere.
+    {
+    transform.Rotate(Vector3.forward*rotationSpeed*Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
