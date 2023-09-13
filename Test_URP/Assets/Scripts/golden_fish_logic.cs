@@ -33,6 +33,11 @@ public class golden_fish_logic : MonoBehaviour
             goldenFish.SetActive(false);
             score++; // Increment the score by 1
             UpdateScoreText(); // Update the score text when the score changes
+            if (RespawnPoint.healthpoints != 3)
+            {
+            RespawnPoint.healthpoints ++;
+            }
+
         }
     }
 

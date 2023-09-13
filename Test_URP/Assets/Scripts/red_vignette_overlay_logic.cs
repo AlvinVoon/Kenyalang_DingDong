@@ -12,6 +12,7 @@ public class red_vignette_overlay_logic : MonoBehaviour
     {
         // Ensure the overlay is initially hidden
         imageOverlay.CrossFadeAlpha(0f, 0f, false);
+
     }
 
     private void Update()
